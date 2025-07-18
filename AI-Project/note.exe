@@ -1,0 +1,29 @@
+1-  be aware, when a shift happens, there is two possiabilities:
+    - first:    there is at least one free space, so the blocks will be pushed and will 
+                fill the blank spaces
+    
+    - second:   there is no free space, then all will be pushed the the last block will 
+                be pushed out (removed)
+
+2-  the current agent acts good on 3x3 against random and sample agents, exceptable 
+    against 4x4, but not good against 5x5. the responces are missed (duo to lake of time)
+
+3-  there is a code on going in chatGPT_AI_final_project, hope it fixes the problem
+
+4-  an idea for better performance would be this:
+        create a huristic which you can fully trust
+        then, instead of going in the next depth and finding all the possiabilities for
+        each move, only check the deeper moves for the best cases (only if there is more 
+        than one, or, in another strategy you can like go on for the best 3 cases) you 
+        already have, then calculate the best move of those, add them to current best 
+        cases(but waighted, like 0.3 , 0.2 , ... ), and then provide the best case accroding
+        to what we calcualted now. this way needs a powerfull huristic, otherwise this
+        method will performe wrost that what we already have.
+        also this method is based on luck, but what we already have is not, but its also
+        takes more time(the current method)
+
+5-  if none of these worked out, we must go after another strategy. maybe more complicated
+    or totally new evaluation functions
+
+
+        
